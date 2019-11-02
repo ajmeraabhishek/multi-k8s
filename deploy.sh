@@ -1,6 +1,6 @@
-docker build -t ajmeraabhishek/multi-client:latest -t ajmeraabhishek/multi-client:$SHA ./client/Dockerfile ./client
-docker build -t ajmeraabhishek/multi-server:latest -t ajmeraabhishek/multi-server:$SHA ./server/Dockerfile ./server
-docker build -t ajmeraabhishek/multi-worker:latest -t ajmeraabhishek/multi-worker:$SHA ./worker/Dockerfile ./worker
+docker build -t ajmeraabhishek/multi-client:latest -t ajmeraabhishek/multi-client:$SHA -f ./client/Dockerfile ./client
+docker build -t ajmeraabhishek/multi-server:latest -t ajmeraabhishek/multi-server:$SHA -f ./server/Dockerfile ./server
+docker build -t ajmeraabhishek/multi-worker:latest -t ajmeraabhishek/multi-worker:$SHA -f ./worker/Dockerfile ./worker
 docker push ajmeraabhishek/multi-client:latest
 docker push ajmeraabhishek/multi-worker:latest
 docker push ajmeraabhishek/multi-server:latest
